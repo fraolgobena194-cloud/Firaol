@@ -10,40 +10,64 @@
       background: linear-gradient(to right, #4facfe, #00f2fe);
       text-align: center;
       color: white;
+      overflow: hidden;
     }
 
     .container {
-      padding: 50px 20px;
+      padding: 60px 20px;
+      animation: fadeIn 2s ease-in-out;
     }
 
     h1 {
       font-size: 40px;
       margin-bottom: 10px;
+      animation: slideDown 1.5s ease-in-out;
     }
 
     p {
       font-size: 18px;
       margin-bottom: 30px;
+      animation: fadeIn 3s ease-in-out;
     }
 
     .btn {
       background-color: #25D366;
       color: white;
-      padding: 15px 30px;
+      padding: 15px 35px;
       text-decoration: none;
       font-size: 18px;
       border-radius: 30px;
       display: inline-block;
+      transition: 0.3s;
+      animation: pulse 2s infinite;
     }
 
     .btn:hover {
       background-color: #1ebe5d;
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+      100% { transform: scale(1); }
     }
 
     footer {
-      margin-top: 50px;
+      margin-top: 60px;
       font-size: 14px;
       opacity: 0.8;
+      animation: fadeIn 4s ease-in-out;
     }
   </style>
 </head>
@@ -52,4 +76,10 @@
   <div class="container">
     <h1>Hello Firaol 👋</h1>
     <p>Wargee fi Meetii gatii madaalawaa</p>
-    <a class="btn" href="#">Order on WhatsApp
+    <a class="btn" href="#">Order on WhatsApp</a>
+    <footer>
+      © 2026 Firaol Business
+    </footer>
+  </div>
+</body>
+</html>
